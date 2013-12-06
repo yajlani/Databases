@@ -6,6 +6,20 @@
 		<script type="text/javascript" src="js/bbui.js"></script>
 		<script type="text/javascript" src="local:///chrome/webworks.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script src="js/jquery-2.0.3.js"></script>
+		
+		<script type="text/javascript">
+		
+			window.addEventListener('load',function() {
+				document.addEventListener('webworksready', function(e) {
+					bb.init();
+					// Open our first screen
+					bb.pushScreen('home.htm', 'home');
+				}, false);
+			}, false);
+		
+		</script>
+		
 	</head>
 	<body>
 

@@ -1,22 +1,52 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
 
-
 <script type="text/javascript" src="js/main.js"></script>
+<script src="js/jquery-2.0.3.js"></script>
+
 <div data-bb-type="screen" data-bb-effect="slide-left">
-	<div data-bb-type="title" data-bb-caption="Results"data-bb-back-caption="Back" onClick="getMovie();" ></div>
-	<div id="outputDiv"></div>
 
-	<!--
-	<ul id="resultslist">
-	 <li> 
-	 	Example Movie
-		Great
-	 </li>
-	</ul>
-	-->
+<div data-bb-type="title" data-bb-caption="Contacts"data-bb-back-caption="Back"; ></div>
+	<div id="inputDiv">
+			<div data-bb-type="row">
+				<div data-bb-type="label">First Name</div>
+				<input type="text" id="inputFirstName"/>
+			</div>
+			<div data-bb-type="row">
+				<div data-bb-type="label">Last Name</div>
+				<input type="text" id="inputLastName"/>
+			</div>
+			<div data-bb-type="row">
+				<div data-bb-type="label">Mobile Phone</div>
+				<input type="tel" id="inputMobilePhone"/>
+			</div>
+			<div data-bb-type="row">
+				<div data-bb-type="label">Home Phone</div>
+				<input type="tel" id="inputHomePhone"/>
+			</div>
+			<div data-bb-type="row">
+				<div data-bb-type="label">Work Email</div>
+				<input type="email" id="inputWorkEmail"/>
+			</div>
+			<div data-bb-type="row">
+				<div data-bb-type="label">Home Email</div>
+				<input type="email" id="inputHomeEmail"/>
+			</div>
+			<div data-bb-type="row">
+				<div data-bb-type="label">How We Met</div>
+				<input type="text" id="inputHowWeMet"/>
+			</div>
+	
+		<div data-bb-type="button" data-bb-style="stretch" onClick="addNewContact();">Add contact</div>
+	
+	</div>
+	
+	
+	<div id="outputDiv" style="display:none"></div>
+	
 	<div data-bb-type="action-bar">
-
-		<div data-bb-type="action" data-bb-style="tab" data-bb-overflow="true" data-bb-img="images/actionBar/cog_dark_theme.png" onClick="bb.pushScreen('results.htm', 'results'); getMovie();">Results</div>
-		<div data-bb-type="action" data-bb-style="tab" data-bb-overflow="true" data-bb-img="images/actionBar/cog_dark_theme.png" onClick="bb.pushScreen('add.htm', 'add');">Add Movie</div>
-
-</div>
+		<div data-bb-type="action" data-bb-style="button" data-bb-img="images/actionBar/cog_dark_theme.png" onClick="allContactsClick(); getContacts();">All Contacts</div>
+		<div data-bb-type="action" data-bb-style="button" data-bb-img="images/actionBar/cog_dark_theme.png" onClick="addContactsClick();">Add Contacts</div>
+	</div>
+	
+	
+	
